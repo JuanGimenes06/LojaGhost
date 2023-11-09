@@ -1,43 +1,44 @@
-*{
-    border: 0;
+* {
     margin: 0;
+    border: 0;
     padding: 0;
     box-sizing: border-box;}
-img{
+img {
     width: 100%;
     height: auto;}
-a{
-    text-decoration: none;}
 /* *** */
-:root{
-    --laranja1: #BC8743;
-    --vermelho: #B20105;    
-    --branco: #fff;
-    --preto: #000;
-}
-/* *** */
-.conteiner{
-    display: flex;
-    margin: 0 100px;}
-#header .conteiner{
+@font-face {font-family: "Ghost";
+    src: url("https://db.onlinewebfonts.com/t/6de62301cbce6d09736bff46f2ae832f.eot");
+    src: url("https://db.onlinewebfonts.com/t/6de62301cbce6d09736bff46f2ae832f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/6de62301cbce6d09736bff46f2ae832f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/6de62301cbce6d09736bff46f2ae832f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/6de62301cbce6d09736bff46f2ae832f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/6de62301cbce6d09736bff46f2ae832f.svg#Ghostz")format("svg");}
+@font-face {font-family: 'Ghost-titulo' ;
+    src: url(font/cloister-black-font/CloisterBlackLight-axjg.ttf);}
+    /* *** */
+.container {
+    margin: 0 100px;
+    display: flex;}
+#header .container {
     justify-content: space-between;
     align-items: center;}
-#main .conteiner{
+#main .container {
     flex-direction: column;}
-.produto-linha{
+.produto-linha {
     display: flex;
     justify-content: space-between;}
-input{
-    border: 1px solid var(--preto);
+input {
+    border: 2px solid black;
     padding: 5px 7px;
-    border-radius: 2px;
+    border-radius: 8px;
     width: 400px;}
-#carrinho-icon img{
+#carrinho-icon img {
     width: 50px;}
-#carrinho-icon{
+#carrinho-icon {
     display: flex;}
 .produto img{
-    width: 200px;
-    height: 250px;}
-
-
+    height: 300px;}
+.logo-nome{
+    height: 130px;
+}
