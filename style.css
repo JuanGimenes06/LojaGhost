@@ -54,7 +54,7 @@ input {
     height: 300px;}
 .logo-nome{
     height: 130px;}
-#carrinho-itens{
+#carrinho-itens {
     display: none;
     flex-direction: column;
     align-items: center;
