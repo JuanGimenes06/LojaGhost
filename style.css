@@ -24,8 +24,7 @@ img {
     --fontbuttonP:100 25px 'Ghost-titulo';
     --fontbutton:100 30px 'Ghost-titulo';
     --fontbutton2:100 37px 'Ghost-titulo';
-    --fontLi: 500 18px 'Ghost';
-}
+    --fontLi: 500 18px 'Ghost';}
 /* *** */
 .container {
     margin: 0 100px;
@@ -223,11 +222,9 @@ li{
     padding: 5px 10px;
     border-radius: 20px;}
 .diminuir img{
-    height: 270px;
-}
+    height: 270px;}
 .diminuir{
-    padding-top: 25px;
-}
+    padding-top: 25px;}
 
 
 
