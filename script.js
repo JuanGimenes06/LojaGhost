@@ -38,7 +38,7 @@ function addCarrinho(itemNome, itemPreco){
     }
 
     // atualiza o valor total
-    document.getElementById("preco-total").innerHTML = "Valor Total R$"+precoTotal.toFixed(2)
+    document.getElementById("preco-total").innerHTML = "Total: R$"+precoTotal.toFixed(2)
     updateCarrinho()
 }
 
@@ -52,7 +52,7 @@ function removeCarrinho(itemNome, itemPreco) {
         } else {
             document.getElementById("itens-lista").removeChild(itensCarrinho[itemNome].liItem)
             delete itensCarrinho[itemNome]
-            document.getElementById("preco-total").innerHTML = "Valor Total: R$ 0.00" 
+            document.getElementById("preco-total").innerHTML = "Total: R$0.00" 
         }
         updateCarrinho()
         document.getElementById("preco-total").innerHTML = "Valor Total: R$" + precoTotal.toFixed(2)
@@ -70,7 +70,7 @@ function updateCarrinho() {
 function limparCarrinho(){
     
     document.getElementById("itens-lista").innerHTML=""
-    document.getElementById("preco-total").innerHTML="valor Total: R$ 0.00"
+    document.getElementById("preco-total").innerHTML="Total: R$0.00"
 
     for (let itemNome in itensCarrinho){
         delete itensCarrinho[itemNome]
@@ -80,7 +80,7 @@ function limparCarrinho(){
 function toggleCarrinho(){
     const itensCarrinhoDiv= document.getElementById("carrinho-itens")
     if(itensCarrinhoDiv.style.display === "none"){
-        itensCarrinhoDiv.style.display = "block"
+        itensCarrinhoDiv.style.display = "flex"
     } else{
         itensCarrinhoDiv.style.display = "none"
     }

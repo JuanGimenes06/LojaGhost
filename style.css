@@ -16,7 +16,17 @@ img {
     url("https://db.onlinewebfonts.com/t/6de62301cbce6d09736bff46f2ae832f.svg#Ghostz")format("svg");}
 @font-face {font-family: 'Ghost-titulo' ;
     src: url(font/cloister-black-font/CloisterBlackLight-axjg.ttf);}
-    /* *** */
+/* *** */
+:root{
+    --fontTituloLogo:500 45px 'Ghost-titulo';
+    --fontTitulo:500 40px 'Ghost-titulo';
+    --fontInput:400 20px 'Ghost';
+    --fontbuttonP:100 25px 'Ghost-titulo';
+    --fontbutton:100 30px 'Ghost-titulo';
+    --fontbutton2:100 37px 'Ghost-titulo';
+    --fontLi: 500 18px 'Ghost';
+}
+/* *** */
 .container {
     margin: 0 100px;
     display: flex;}
@@ -27,18 +37,198 @@ img {
     flex-direction: column;}
 .produto-linha {
     display: flex;
-    justify-content: space-between;}
+    justify-content: space-around;}
 input {
-    border: 2px solid black;
-    padding: 5px 7px;
-    border-radius: 8px;
-    width: 400px;}
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    padding: 5px 7px 2px;
+    width: 300px;
+    outline: none;
+    font: var(--fontInput);}
 #carrinho-icon img {
     width: 50px;}
 #carrinho-icon {
-    display: flex;}
+    display: flex;
+    cursor: pointer;}
 .produto img{
     height: 300px;}
 .logo-nome{
-    height: 130px;
+    height: 130px;}
+#carrinho-itens{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;}
+.procurar{
+    width: 100px;
+    margin-left: 0;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+    font: var(--fontbutton);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.6s ease;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: #fff;}
+#buscar{
+    display: flex;
+    align-items: end;}
+.button-text {
+    z-index: 2;
+    transition: opacity 0.6s ease;}
+.hover-image {
+    position: absolute;
+    top: 4px;
+    left: 35px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    color: #000;}
+.procurar:hover .button-text {
+    opacity: 0;}
+.procurar:hover .hover-image {
+    opacity: 1;}
+.procurar:hover{
+    background-color: #fff;}
+#carrinho-icon{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    color: #fff;}
+#cont-carrinho{
+    border-top: #fff 1px solid;
+    margin-top: 10px;
+    font: var(--fontbutton);
+    width: 20px;
+    text-align: center;}
+.nome-secao{
+    font:var(--fontTituloLogo);
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;}
+.nome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-image: url(img/fundo-infestissumam.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    opacity: 0.5;
+    border-bottom: #000 10px solid;
+    border-top: #000 10px solid}
+.produtos{
+    background: linear-gradient(to bottom, #C78A84, #E1B98A);
+    padding-top: 30px;}
+#header{
+    background: linear-gradient(to bottom, #4b4b4b, #7F7F7F);}
+li{
+    list-style-type: lower-roman;
+    font:var(--fontLi);
+    color: #fff;}
+.add,
+.remove{
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;}
+.add{
+    font: var(--fontbutton);}
+.remove{
+    font: var(--fontbutton2);}
+#preco-total{
+    font: var(--fontbuttonP);
+    color: #fff;}
+.limpa{
+    background-color: transparent;
+    font:var(--fontbutton);
+    color: #fff;
+    border-bottom: #fff 2px solid;
+    cursor: pointer;
+    margin-top: 8px; 
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.6s ease;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 200px;}
+.limpa:hover .button-text {
+    opacity: 0;}
+.limpa:hover .hover-image {
+    opacity: 1;}
+.limpa .hover-image{
+    left: 88px;}
+.limpa:hover{
+    background-color: #fff}
+.produto{
+    background-color: #fff;
+    margin: 15px 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 20px;
+    width: 300px;}
+.produto button{
+    font: var(--fontbuttonP);
+    background-color: transparent;
+    cursor: pointer;
+    border-bottom: #000 2px solid;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.6s ease;
+    width: 250px;
+    height: 50px;}
+.produto h3{
+    font: var(--fontbutton);
+    word-wrap: break-word;}
+.produto p{
+    font:var(--fontbutton);}
+.produto button:hover .button-text {
+    opacity: 0;}
+.produto button:hover .hover-image {
+    opacity: 1;}
+.produto button .hover-image{
+    left: 120px;
+    top: 14px;}
+.boneco img:hover{
+    animation: rodar 2s linear infinite}
+@keyframes rodar {
+
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }}
+.secaoTitulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7F7F7F;
+    height: 30px;
+    margin: 50px 0;}
+.titulo{
+    font:var(--fontTitulo);
+    background-color: #7F7F7F;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;}
+.diminuir img{
+    height: 270px;
 }
+.diminuir{
+    padding-top: 25px;
+}
+
+
+
+

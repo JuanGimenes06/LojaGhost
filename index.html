@@ -21,7 +21,10 @@
             </div>
             <div id="buscar">
                 <input type="text" id="buscar-input" placeholder="Pesquisar Produto" oninput="buscarProduto()">
-                <button onclick="buscarSite()">Buscar</button>
+                <button class="procurar" onclick="buscarSite()">
+                    <span class="button-text">Buscar</span>
+                    <i class="fa-solid  fa-magnifying-glass hover-image"></i>
+                </button>
             </div>
             <div id="carrinho-icon" onclick="toggleCarrinho()">
                 <div class="imagem">
@@ -30,9 +33,13 @@
                 <span id="cont-carrinho">0</span>
             </div>
             <div id="carrinho-itens">
-                <ul id="itens-lista"></ul>
+            
                 <span id="preco-total">Total: R$0.00</span>
-                <button class="limpa" onclick="limparCarrinho()">Limpar Carrinho</button>
+                <button class="limpa" onclick="limparCarrinho()">
+                    <span class="button-text">Limpar Carrinho</span>
+                    <i class="hover-image fa-solid fa-trash"></i>
+                </button>
+                <ul id="itens-lista"></ul>
             </div>
         </div>
     </header>
@@ -46,9 +53,13 @@
 
             <div class="produtos">
 
+                <div class="secaoTitulo">
+                    <h1 class="titulo">Plushs</h1>
+                </div>
+
                 <div class="produto-linha">
 
-                    <div class="produto">
+                    <div class="produto boneco">
                         <div class="imagem">
                             <img src="img/cardinal.png" alt="plush-cardinal-vermelho">
                         </div>
@@ -56,11 +67,14 @@
                         <div class="infos">
                             <h3>Plush cardinal vermelho</h3>
                             <p>R$ 179.99</p>
-                            <button onclick="addCarrinho('Plush cardinal vermelho',179.99)">Adicionar ao carrinho</button>
+                            <button onclick="addCarrinho('Plush cardinal vermelho',179.99)">
+                                <span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i>
+                            </button>
                         </div>
                     </div>
 
-                    <div class="produto">
+                    <div class="produto boneco">
                         <div class="imagem">
                             <img src="img/cardinalBranco.png" alt="plush-cardinal-branco">
                         </div>
@@ -68,19 +82,111 @@
                         <div class="infos">
                             <h3>Plush cardinal branco</h3>
                             <p>R$ 159.99</p>
-                            <button onclick="addCarrinho('Plush cardinal branco',159.99)">Adicionar ao carrinho</button>
+                            <button onclick="addCarrinho('Plush cardinal branco',159.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="produto boneco">
+                        <div class="imagem">
+                            <img src="img/cardinalPreto.png" alt="cardinalPreto">
+                        </div>
+
+                        <div class="infos">
+                            <h3>Plush cardinal preto</h3>
+                            <p>R$ 95.99</p>
+                            <button onclick="addCarrinho('Plush cardinal preto',95.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto-linha">
+
+                    <div class="produto boneco">
+                        <div class="imagem">
+                            <img src="img/nameless.png" alt="plush-nameless-ghosts">
+                        </div>
+
+                        <div class="infos">
+                            <h3>Plush Nameless ghosts</h3>
+                            <p>R$ 99.99</p>
+                            <button onclick="addCarrinho('Plush Nameless ghosts',99.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="produto boneco">
+                        <div class="imagem">
+                            <img src="img/papaIII.png" alt="plush-papa-emeritus-III">
+                        </div>
+
+                        <div class="infos">
+                            <h3>Plush papa Emeritus Ⅲ</h3>
+                            <p>R$ 259.99</p>
+                            <button onclick="addCarrinho('Plush papa Emeritus Ⅲ',259.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="produto boneco">
+                        <div class="imagem">
+                            <img src="img/PapaIV.png" alt="plush-papa-emeritus-IV">
+                        </div>
+
+                        <div class="infos">
+                            <h3>Plush papa Emeritus Ⅳ</h3>
+                            <p>R$ 299.99</p>
+                            <button onclick="addCarrinho('Plush papa Emeritus Ⅳ',299.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secaoTitulo">
+                    <h1 class="titulo">Vinis</h1>
+                </div>
+
+                <div class="produto-linha">
+
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/Vinil-C&D.png" alt="Vinil-C&D">
+                        </div>
+
+                        <div class="infos">
+                            <h3>Vinil C&D</h3>
+                            <p>R$ 379.99</p>
+                            <button onclick="addCarrinho('Vinil C&D',379.99)">
+                                <span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/Vinil-Impera.png" alt="Vinil-Impera">
+                        </div>
+
+                        <div class="infos">
+                            <h3>Vinil Impera</h3>
+                            <p>R$ 499.99</p>
+                            <button onclick="addCarrinho('Vinil Impera',499.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
                         </div>
                     </div>
                     
                     <div class="produto">
                         <div class="imagem">
-                            <img src="img/cardinalPreto.png" alt="Vinil-infestissumam">
+                            <img src="img/Vinil-infestissumam.png" alt="Vinil-infestissumam">
                         </div>
 
                         <div class="infos">
                             <h3>Vinil Infestissumam</h3>
-                            <p>R$ 95.99</p>
-                            <button onclick="addCarrinho('Vinil Infestissumam',95.99)">Adicionar ao carrinho</button>
+                            <p>R$ 999.99</p>
+                            <button onclick="addCarrinho('Vinil Infestissumam',999.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
                         </div>
                     </div>
                 </div>
@@ -89,37 +195,130 @@
 
                     <div class="produto">
                         <div class="imagem">
-                            <img src="img/nameless.png" alt="plush-nameless-ghosts">
+                            <img src="img/Vinil-meliora.png" alt="Vinil-meliora">
                         </div>
 
                         <div class="infos">
-                            <h3>Plush Nameless ghosts</h3>
-                            <p>R$ 99.99</p>
-                            <button onclick="addCarrinho('Plush Nameless ghosts',99.99)">Adicionar ao carrinho</button>
+                            <h3>Vinil Meliora</h3>
+                            <p>R$ 399.99</p>
+                            <button onclick="addCarrinho('Vinil Meliora',399.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
                         </div>
                     </div>
 
                     <div class="produto">
                         <div class="imagem">
-                            <img src="img/papaIII.png" alt="plush-papa-emeritus-III">
+                            <img src="img/Vinil-popestar.png" alt="Vinil-popestar">
                         </div>
 
                         <div class="infos">
-                            <h3>Plush papa Emeritus III</h3>
-                            <p>R$ 259.99</p>
-                            <button onclick="addCarrinho('Plush papa Emeritus III',259.99)">Adicionar ao carrinho</button>
+                            <h3>Vinil Popestar</h3>
+                            <p>R$ 289.99</p>
+                            <button onclick="addCarrinho('Vinil Popesta',289.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
                         </div>
                     </div>
                     
                     <div class="produto">
                         <div class="imagem">
-                            <img src="img/PapaIV.png" alt="plush-papa-emeritus-IV">
+                            <img src="img/Vinil-SatanicPanic.png" alt="Vinil-SatanicPanic">
                         </div>
 
                         <div class="infos">
-                            <h3>Plush papa Emeritus IV</h3>
-                            <p>R$ 299.99</p>
-                            <button onclick="addCarrinho('Plush papa Emeritus IV',299.99)">Adicionar ao carrinho</button>
+                            <h3>Vinil Satanic Panic</h3>
+                            <p>R$ 799.99</p>
+                            <button onclick="addCarrinho('Vinil Satanic Panic',799.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secaoTitulo">
+                    <h1 class="titulo">Roupas</h1>
+                </div>
+
+                <div class="produto-linha">
+
+                    <div class="produto diminuir">
+                        <div class="imagem">
+                            <img src="img/camisa-opus eponymous.png" alt="camisa-opus eponymous">
+                        </div>
+
+                        <div class="infos">
+                            <h3>Camisa Eponymous</h3>
+                            <p>R$ 79.99</p>
+                            <button onclick="addCarrinho('Camisa Opus Eponymous',79.99)">
+                                <span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/camisaSatanicPanic.webp" alt="camisaSatanicPanic">
+                        </div>
+
+                        <div class="infos">
+                            <h3>Camisa Satanic Panic</h3>
+                            <p>R$ 59.99</p>
+                            <button onclick="addCarrinho('Camisa Satanic Panic',59.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/pulseira.png" alt="pulseira">
+                        </div>
+
+                        <div class="infos">
+                            <h3>Pulseira Ghost</h3>
+                            <p>R$ 5.99</p>
+                            <button onclick="addCarrinho('Pulseira Ghost',5.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto-linha">
+
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/moletomBlue.png" alt="moletomBlue">
+                        </div>
+
+                        <div class="infos">
+                            <h3>Moletom Eponymous</h3>
+                            <p>R$ 69.99</p>
+                            <button onclick="addCarrinho('Moletom Eponymous',69.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/moletomPapaIV.png" alt="moletomPapaIV">
+                        </div>
+
+                        <div class="infos">
+                            <h3>Moletom Papa Ⅳ</h3>
+                            <p>R$ 159.99</p>
+                            <button onclick="addCarrinho('Moletom Papa Ⅳ',159.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/moletomRed.png" alt="moletomRed">
+                        </div>
+
+                        <div class="infos">
+                            <h3>Moletom Infestissumam</h3>
+                            <p>R$ 99.99</p>
+                            <button onclick="addCarrinho('Moletom Infestissumam',99.99)"><span class="button-text">Adicionar ao carrinho</span>
+                                <i class="fa-solid fa-arrow-up fa-bounce hover-image"></i></button>
                         </div>
                     </div>
                 </div>
