@@ -97,5 +97,4 @@ function buscarProduto(){
         } else{
             produto[i].style.display = "none"
         }
-    }
-}
+    }}

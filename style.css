@@ -57,8 +57,17 @@ input {
 #carrinho-itens {
     display: none;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;}
+    position: absolute;
+    right: 0;
+    top: 144px;
+    z-index: 1;
+    text-align: right;
+    justify-content: right;
+    background-color: #000;
+    opacity: 0.6;
+    border: #000 30px solid;
+    border-bottom-left-radius: 15px;
+    animation: entradaAnimacao 1s ease-in-out;}
 .procurar{
     width: 100px;
     margin-left: 0;
@@ -131,7 +140,9 @@ input {
 li{
     list-style-type: lower-roman;
     font:var(--fontLi);
-    color: #fff;}
+    color: #fff;
+    text-align: left;
+    margin: 5px 0 0 30px;}
 .add,
 .remove{
     background-color: transparent;
@@ -156,15 +167,17 @@ li{
     transition: background-color 0.6s ease;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    width: 200px;}
+    width: 100%;
+    text-align: end;
+    padding: 10px 0;}
 .limpa:hover .button-text {
     opacity: 0;}
 .limpa:hover .hover-image {
     opacity: 1;}
 .limpa .hover-image{
-    left: 88px;}
-.limpa:hover{
-    background-color: #fff}
+    right: 88px;
+    color: #fff;
+    top: 15px ;}
 .produto{
     background-color: #fff;
     margin: 15px 0;
@@ -225,7 +238,15 @@ li{
     height: 270px;}
 .diminuir{
     padding-top: 25px;}
-
+@keyframes entradaAnimacao {
+    from {
+        opacity: 0;
+        transform: translateX(100%); /* ou outra propriedade para ajustar a posição inicial */
+    }
+    to {
+        opacity: 0.6;
+        transform: translateX(0);
+    }}
 
 
 
